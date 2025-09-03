@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
@@ -18,105 +18,8 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        /* Custom CSS Overrides for a more professional look */
-        :root {
-            --brand-primary: #0d47a1; /* A deeper, more professional blue */
-            --brand-secondary: #343a40; /* A dark grey for the footer and navbar */
-            --brand-accent: #17a2b8;   /* A vibrant teal for accents */
-            --text-dark: #212529;
-            --text-light: #f8f9fa;
-            --font-headings: 'Poppins', sans-serif;
-            --font-body: 'Roboto', sans-serif;
-            --star-color: #fbb400; /* Gold color for stars */
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--text-dark);
-        }
-
-        h1, h2, h3, h4, h5, h6,
-        .uk-heading-primary, .uk-heading-medium, .uk-card-title, .uk-accordion-title {
-            font-family: var(--font-headings);
-            font-weight: 700;
-        }
-
-        .uk-button-primary {
-            background-color: var(--brand-primary);
-            border-radius: 50px;
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-
-        .uk-button-primary:hover {
-            background-color: #002171;
-        }
-
-        .uk-section-primary {
-            background-color: var(--brand-primary);
-        }
-
-        .uk-section-secondary {
-            background-color: var(--brand-secondary);
-        }
-
-        .uk-light a:not(.uk-button),
-        .uk-section-primary a:not(.uk-button),
-        .uk-section-secondary a:not(.uk-button) {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-
-        .uk-light a:not(.uk-button):hover,
-        .uk-section-primary a:not(.uk-button):hover,
-        .uk-section-secondary a:not(.uk-button):hover {
-            color: #e0e0e0;
-        }
-
-        .uk-accordion-title {
-            color: var(--brand-primary);
-            font-size: 1.2em;
-        }
-
-        .uk-card-hover:hover {
-            box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
-        }
-
-        /* --- Dark Toolbar Styles (Always On & Forceful) --- */
-        .uk-navbar-container {
-            background: var(--brand-secondary) !important;
-        }
-
-        .uk-navbar-nav > li > a, .uk-navbar-toggle .uk-icon {
-            color: var(--text-light) !important;
-            transition: color 0.3s ease;
-        }
-
-        .uk-navbar-nav > li > a {
-            text-transform: uppercase;
-            font-weight: 500;
-            font-family: var(--font-headings);
-        }
-
-        .uk-navbar-nav > li > a:hover,
-        .uk-navbar-nav > li.uk-active > a,
-        .uk-navbar-toggle:hover .uk-icon {
-            color: var(--brand-accent) !important;
-        }
-
-        .uk-sticky.uk-navbar-container {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-            .uk-logo-text {
-            color: var(--text-light); /* Or a specific color that stands out */
-            font-size: 1.2em; /* Adjust as needed */
-            font-family: var(--font-headings);
-            line-height: 1; /* To align better with image */
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css" />
 
     <script type="application/ld+json">
     {
@@ -315,35 +218,55 @@
         <div id="testimonials" class="uk-section uk-section-muted">
             <div class="uk-container">
                 <h2 class="uk-heading-medium uk-text-center" data-aos="fade-up">Lo que dicen nuestros pacientes</h2>
-                <div class="uk-child-width-1-3@m" uk-grid>
-                    <div data-aos="fade-up" data-aos-delay="100">
-                        <div class="uk-card uk-card-default uk-card-body uk-text-center">
-                            <div class="uk-margin-small-bottom" style="color: var(--star-color);">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true; autoplay: true; autoplay-interval: 5000">
+
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-grid">
+                        <li>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center" data-aos="fade-up" data-aos-delay="100">
+                                <div class="uk-margin-small-bottom" style="color: var(--star-color);">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="uk-margin-remove-bottom">"El mejor trato que he recibido en una clínica dental. El personal es increíblemente amable y profesional. ¡Recomendado al 100%!"</p>
+                                <p class="uk-text-meta uk-margin-small-top">- María G.</p>
                             </div>
-                            <p class="uk-margin-remove-bottom">"El mejor trato que he recibido en una clínica dental. El personal es increíblemente amable y profesional. ¡Recomendado al 100%!"</p>
-                            <p class="uk-text-meta uk-margin-small-top">- María G.</p>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <div class="uk-card uk-card-default uk-card-body uk-text-center">
-                            <div class="uk-margin-small-bottom" style="color: var(--star-color);">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center" data-aos="fade-up" data-aos-delay="200">
+                                <div class="uk-margin-small-bottom" style="color: var(--star-color);">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="uk-margin-remove-bottom">"Tenía mucho miedo de ir al dentista, pero el Dr. Smith y su equipo me hicieron sentir muy cómodo. El procedimiento fue indoloro."</p>
+                                <p class="uk-text-meta uk-margin-small-top">- Juan P.</p>
                             </div>
-                            <p class="uk-margin-remove-bottom">"Tenía mucho miedo de ir al dentista, pero el Dr. Smith y su equipo me hicieron sentir muy cómodo. El procedimiento fue indoloro."</p>
-                            <p class="uk-text-meta uk-margin-small-top">- Juan P.</p>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="300">
-                        <div class="uk-card uk-card-default uk-card-body uk-text-center">
-                            <div class="uk-margin-small-bottom" style="color: var(--star-color);">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center" data-aos="fade-up" data-aos-delay="300">
+                                <div class="uk-margin-small-bottom" style="color: var(--star-color);">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="uk-margin-remove-bottom">"Instalaciones modernas y limpias. Se nota que invierten en tecnología y en la comodidad del paciente. Muy satisfecho."</p>
+                                <p class="uk-text-meta uk-margin-small-top">- Laura R.</p>
                             </div>
-                            <p class="uk-margin-remove-bottom">"Instalaciones modernas y limpias. Se nota que invierten en tecnología y en la comodidad del paciente. Muy satisfecho."</p>
-                            <p class="uk-text-meta uk-margin-small-top">- Laura R.</p>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default uk-card-body uk-text-center">
+                                <div class="uk-margin-small-bottom" style="color: var(--star-color);">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="uk-margin-remove-bottom">"La atención al detalle es impresionante. Se tomaron el tiempo para explicarme todo el proceso. Me sentí en muy buenas manos."</p>
+                                <p class="uk-text-meta uk-margin-small-top">- Carlos S.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
                 </div>
+                
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
             </div>
         </div>
 
@@ -385,7 +308,10 @@
                         <span uk-icon="receiver"></span> Llamar Ahora
                     </a>
                 </div>
-                <div class="uk-text-center uk-margin-medium-top" data-aos="fade-up" data-aos-delay="200">
+
+                <!-- End Contact Form -->
+
+                <div class="uk-text-center uk-margin-medium-top" data-aos="fade-up" data-aos-delay="300">
                     <a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a>
                     <a href="#" class="uk-icon-button" uk-icon="facebook"></a>
                 </div>
@@ -454,4 +380,52 @@
     </script>
 
 </body>
-</html>
+</html>ipt>
+
+</body>
+</html>html>/html>ación de Seguros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-text-center uk-margin-medium-top">
+                <a href="venta.html" class="uk-button uk-button-secondary uk-border-rounded">Regresar a la Presentación</a>
+            </div>
+            <div class="uk-text-center uk-margin-large-top">
+                <p>&copy; 2025 <span class="uk-text-primary uk-text-bold">Linea Dental Studio</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Off-canvas navigation for mobile -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-active"><a href="#" uk-scroll>Inicio</a></li>
+                <li><a href="#about" uk-scroll>Sobre Nosotros</a></li>
+                <li><a href="#services" uk-scroll>Servicios</a></li>
+                <li><a href="#team" uk-scroll>Equipo</a></li>
+                <li><a href="#testimonials" uk-scroll>Testimonios</a></li>
+                <li><a href="#location" uk-scroll>Ubicación</a></li>
+                <li><a href="#contact" uk-scroll>Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+    </script>
+
+</body>
+</html>ipt>
+
+</body>
+</html>html>/html>
